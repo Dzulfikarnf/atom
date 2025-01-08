@@ -54,7 +54,7 @@ with st.form("prediction_form"):
     A = st.number_input("Masukkan nomor massa (A):", value=0.0, step=0.01, help="Jumlah proton + jumlah neutron. Rentang: 1 hingga 270")
     MASSEXCESS = st.number_input("Masukkan nilai MASSEXCESS:", value=0.0, step=0.01, help="Perbedaan antara massa sebenarnya dengan massa nominal. Rentang: -91,652.85 hingga 134,834.71")
     AtomicMass = st.number_input("Masukkan nilai AtomicMass:", value=0.0, step=0.01, help="Nilai massa atom untuk isotop tertentu. Rentang: 1.0078 hingga 270.1446")
-    BE = st.number_input("Masukkan nilai BE (Energi Ikat):", value=0.0, step=0.01, help="Energi ikat oer nukleon. Rentang: 0.00 hingga 8,794.55")
+    BE = st.number_input("Masukkan nilai BE (Energi Ikat):", value=0.0, step=0.01, help="Energi ikat per nukleon. Rentang: 0.00 hingga 8,794.55")
     BE_uncer = st.number_input("Masukkan nilai BE_uncer:", value=0.0, step=0.01, help="Ketidakpastian dalam nilai energi ikat. Rentang: 0 hingga 7,680.14")
     
     # Tombol prediksi
