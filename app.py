@@ -48,14 +48,14 @@ Silakan masukkan nilai-nilai berikut untuk mendapatkan hasil prediksi:
 # Form input
 with st.form("prediction_form"):
     st.write("### Masukkan Fitur:")
-    _1nz = st.number_input("Masukkan nilai 1nz:", value=0.0, step=0.01)
-    N = st.number_input("Masukkan jumlah neutron (N):", value=0.0, step=0.01)
-    Z = st.number_input("Masukkan jumlah proton (Z):", value=0.0, step=0.01)
-    A = st.number_input("Masukkan nomor massa (A):", value=0.0, step=0.01)
-    MASSEXCESS = st.number_input("Masukkan nilai MASSEXCESS:", value=0.0, step=0.01)
-    AtomicMass = st.number_input("Masukkan nilai AtomicMass:", value=0.0, step=0.01)
-    BE = st.number_input("Masukkan nilai BE (Energi Ikat):", value=0.0, step=0.01)
-    BE_uncer = st.number_input("Masukkan nilai BE_uncer:", value=0.0, step=0.01)
+    _1nz = st.number_input("Masukkan nilai 1nz:", value=0.0, step=0.01, help="Nilai massa netron tunggal. Rentang: -6.00 hingga 59.00")
+    N = st.number_input("Masukkan jumlah neutron (N):", value=0.0, step=0.01, help="Jumlah neutron menentukan stabilitas inti. Rentang: 0 hingga 1600")
+    Z = st.number_input("Masukkan jumlah proton (Z):", value=0.0, step=0.01, help="Jumlah proton dalam inti atom. Rentang: 0 hingga 99")
+    A = st.number_input("Masukkan nomor massa (A):", value=0.0, step=0.01, help="Jumlah proton + jumlah neutron. Rentang: 1 hingga 270")
+    MASSEXCESS = st.number_input("Masukkan nilai MASSEXCESS:", value=0.0, step=0.01, help="Perbedaan antara massa sebenarnya dengan massa nominal. Rentang: -91,652.85 hingga 134,834.71")
+    AtomicMass = st.number_input("Masukkan nilai AtomicMass:", value=0.0, step=0.01, help="Nilai massa atom untuk isotop tertentu. Rentang: 1.0078 hingga 270.1446")
+    BE = st.number_input("Masukkan nilai BE (Energi Ikat):", value=0.0, step=0.01, help="Energi ikat oer nukleon. Rentang: 0.00 hingga 8,794.55")
+    BE_uncer = st.number_input("Masukkan nilai BE_uncer:", value=0.0, step=0.01, help="Ketidakpastian dalam nilai energi ikat. Rentang: 0 hingga 7,680.14")
     
     # Tombol prediksi
     submit = st.form_submit_button("Prediksi")
